@@ -107,3 +107,7 @@ func _on_Ingame_Settings_Button_pressed():
 func _on_Ingame_History_Button_pressed():
 	get_tree().set_input_as_handled()
 	Dialogic.toggle_history()
+
+
+func _on_MenuButton_pressed():
+	$InGameMenu.visible = !$InGameMenu.visible

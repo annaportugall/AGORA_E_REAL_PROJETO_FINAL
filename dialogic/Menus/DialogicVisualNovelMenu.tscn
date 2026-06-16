@@ -210,42 +210,61 @@ theme = SubResource( 8 )
 script = ExtResource( 11 )
 Game = NodePath("../../Game")
 
+[node name="MenuButton" type="Button" parent="Menus/MenuContainer"]
+margin_left = 896.0
+margin_top = 21.0
+margin_right = 1006.0
+margin_bottom = 69.0
+text = "☰ Menu"
+
 [node name="InGameMenu" type="HBoxContainer" parent="Menus/MenuContainer"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -31.2996
-margin_bottom = 0.700439
+margin_left = 649.0
+margin_top = -389.0
+margin_right = -276.0
+margin_bottom = -273.0
 theme = SubResource( 10 )
 custom_constants/separation = 20
 alignment = 1
 
-[node name="Save_Button" type="Button" parent="Menus/MenuContainer/InGameMenu"]
-margin_left = 336.0
-margin_right = 383.0
-margin_bottom = 32.0
-text = "Salvar"
+[node name="Panel" type="Panel" parent="Menus/MenuContainer/InGameMenu"]
+margin_left = 49.0
+margin_right = 49.0
+margin_bottom = 116.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/MenuContainer/InGameMenu/Panel"]
+margin_left = 187.0
+margin_top = -134.0
+margin_right = 302.0
+margin_bottom = -18.0
+
+[node name="Settings_Button" type="Button" parent="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer"]
+margin_right = 115.0
+margin_bottom = 26.0
+text = "Configurações"
 flat = true
 
-[node name="Load_Button" type="Button" parent="Menus/MenuContainer/InGameMenu"]
-margin_left = 403.0
-margin_right = 470.0
-margin_bottom = 32.0
-text = "Carregar"
-flat = true
-
-[node name="History_Button" type="Button" parent="Menus/MenuContainer/InGameMenu"]
-margin_left = 490.0
-margin_right = 552.0
-margin_bottom = 32.0
+[node name="History_Button" type="Button" parent="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer"]
+margin_top = 30.0
+margin_right = 115.0
+margin_bottom = 56.0
 text = "História"
 flat = true
 
-[node name="Settings_Button" type="Button" parent="Menus/MenuContainer/InGameMenu"]
-margin_left = 572.0
-margin_right = 687.0
-margin_bottom = 32.0
-text = "Configurações"
+[node name="Save_Button" type="Button" parent="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer"]
+margin_top = 60.0
+margin_right = 115.0
+margin_bottom = 86.0
+text = "Salvar"
+flat = true
+
+[node name="Load_Button" type="Button" parent="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer"]
+margin_top = 90.0
+margin_right = 115.0
+margin_bottom = 116.0
+text = "Carregar"
 flat = true
 
 [node name="SubMenus" type="Control" parent="Menus/MenuContainer"]
@@ -623,9 +642,6 @@ margin_bottom = 270.0
 size_flags_vertical = 3
 text = "Continuar"
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Settings_Button" type="Button" parent="Menus/MenuContainer/MainMenu/Buttons"]
 margin_left = 151.0
@@ -826,10 +842,11 @@ stream = ExtResource( 4 )
 volume_db = -0.25
 autoplay = true
 
-[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Save_Button" to="Menus/MenuContainer" method="_on_Ingame_Save_Button_pressed"]
-[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Load_Button" to="Menus/MenuContainer" method="_on_Ingame_Load_Button_pressed"]
-[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/History_Button" to="Menus/MenuContainer" method="_on_Ingame_History_Button_pressed"]
-[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Settings_Button" to="Menus/MenuContainer" method="_on_Ingame_Settings_Button_pressed"]
+[connection signal="pressed" from="Menus/MenuContainer/MenuButton" to="Menus/MenuContainer" method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/Settings_Button" to="Menus/MenuContainer" method="_on_Ingame_Settings_Button_pressed"]
+[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/History_Button" to="Menus/MenuContainer" method="_on_Ingame_History_Button_pressed"]
+[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/Save_Button" to="Menus/MenuContainer" method="_on_Ingame_Save_Button_pressed"]
+[connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/Load_Button" to="Menus/MenuContainer" method="_on_Ingame_Load_Button_pressed"]
 [connection signal="item_selected" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/Display/DisplaySelect" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_DisplaySelect_item_selected"]
 [connection signal="value_changed" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/OverallVolume/Slider" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_Slider_value_changed"]
 [connection signal="pressed" from="Menus/MenuContainer/SubMenus/Buttons/MainMenu_Button" to="Menus/MenuContainer/SubMenus" method="_on_MainMenu_Button_pressed"]
