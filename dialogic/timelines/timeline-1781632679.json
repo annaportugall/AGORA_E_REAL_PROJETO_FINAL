@@ -26,22 +26,9 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "Não era exatamente calor, nem conforto, mas uma mudança perceptível, como um suspiro contido depois de meses de tensão."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "Não era exatamente calor, nem conforto, mas uma mudança perceptível, como um suspiro contido depois de meses de tensão."
 		},
 		{
 			"character": "",
@@ -63,22 +50,9 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "É um cenário que deveria trazer alguma interrupção — um sinal de continuidade, de que o tempo segue — mas, para você, só reforça o quanto tudo parece errado."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "É um cenário que deveria trazer alguma interrupção — um sinal de continuidade, de que o tempo segue — mas, para você, só reforça o quanto tudo parece errado."
 		},
 		{
 			"character": "",
@@ -100,22 +74,9 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "Desde então, cada manhã começa a mesma forma: um despertar pesado, uma sensação constante no peito que nunca foi completamente concluída, como se algo tivesse sido arrancado e destruído,sem nada a ser feito."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "Desde então, cada manhã começa a mesma forma: um despertar pesado, uma sensação constante no peito que nunca foi completamente concluída, como se algo tivesse sido arrancado e destruído,sem nada a ser feito."
 		},
 		{
 			"character": "",

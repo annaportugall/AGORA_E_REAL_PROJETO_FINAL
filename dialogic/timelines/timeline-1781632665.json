@@ -68,22 +68,9 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "Aslan."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "Aslan"
 		},
 		{
 			"character": "",

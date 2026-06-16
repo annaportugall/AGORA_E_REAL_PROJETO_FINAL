@@ -8,22 +8,9 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "O tecido, antes associado a dias longos e despreocupados, agora serve apenas como proteção contra um frio que não é só físico."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "O tecido, antes associado a dias longos e despreocupados, agora serve apenas como proteção contra um frio que não é só físico."
 		},
 		{
 			"character": "",
@@ -82,28 +69,15 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "Não é longa, mas suficiente para gerar dúvidas — se ele escolheu, se entendeu, se vai responder."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "Não é longa, mas suficiente para gerar dúvidas — se ele escolheu, se entendeu, se vai responder."
 		},
 		{
 			"character": "character-1777851120.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "...tô."
+			"text": "tô."
 		},
 		{
 			"character": "",
@@ -113,22 +87,9 @@
 		},
 		{
 			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "O silêncio retorna imediatamente, ocupando o espaço entre vocês com facilidade."
-		},
-		{
-			"choice": "...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "O silêncio retorna imediatamente, ocupando o espaço entre vocês com facilidade."
 		},
 		{
 			"character": "",
@@ -141,6 +102,65 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Você devia comer alguma coisa."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Você não desvia o olhar."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Os dedos continuam deslizando pela manta, no mesmo ritmo de antes, como se a conversa não tivesse acontecido."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Você respira fundo, segurando o ar por um instante antes de soltá-lo devagar."
+		},
+		{
+			"character": "character-1777839556.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Você lembrou de alguma coisa?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dessa vez, há uma mudança."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O movimento para."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Não abruptamente, mas o suficiente para quebrar o padrão que vinha se repetindo. Ainda assim, ele não olha para você."
+		},
+		{
+			"choice": "Continuar olhando.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"change_timeline": "timeline-1781632676.json",
+			"event_id": "dialogic_020"
 		}
 	],
 	"metadata": {
