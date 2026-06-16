@@ -21,7 +21,7 @@ func add_game_node(node):
 	get_node(Game).add_child(node)
 	node.connect("timeline_end", self, "_on_game_ended")
 	yield($MenuAnimations, "animation_finished")
-	$InGameMenu.show()
+	#$InGameMenu.show()
 	$MainMenu.hide()
 	$SubMenus.hide()
 	$MenuAnimations.play_backwards("Fade")
@@ -110,4 +110,10 @@ func _on_Ingame_History_Button_pressed():
 
 
 func _on_MenuButton_pressed():
+	# Inverte a visibilidade do menu
 	$InGameMenu.visible = !$InGameMenu.visible
+	
+	if $InGameMenu.visible:
+		pause_game() # Chama a sua função que já pausa o jogo!
+	else:
+		get_tree().paused = false # Despausa o jogo se o menu for fechado

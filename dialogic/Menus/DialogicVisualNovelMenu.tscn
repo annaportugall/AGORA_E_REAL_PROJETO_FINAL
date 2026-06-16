@@ -218,6 +218,7 @@ margin_bottom = 69.0
 text = "☰ Menu"
 
 [node name="InGameMenu" type="HBoxContainer" parent="Menus/MenuContainer"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
