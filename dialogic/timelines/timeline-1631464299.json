@@ -40,7 +40,13 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Entre as árvores, parcialmente engolida pela escuridão, uma carruagem se afasta pela trilha estreita que corta a mata. As rodas rangem baixo contra a terra úmida, e os cavalos avançam sem pressa, como se já soubessem o caminho."
+			"text": "Entre as árvores, parcialmente engolida pela escuridão, uma carruagem se afasta pela trilha estreita que corta a mata. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As rodas rangem baixo contra a terra úmida, e os cavalos avançam sem pressa, como se já soubessem o caminho."
 		},
 		{
 			"character": "",
