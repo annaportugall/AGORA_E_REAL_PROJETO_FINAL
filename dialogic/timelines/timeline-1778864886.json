@@ -22,7 +22,7 @@
 			"character": "character-1777839556.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "“Lian?”"
+			"text": "Lian?"
 		},
 		{
 			"character": "",
@@ -159,7 +159,7 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"change_timeline": "",
+			"change_timeline": "timeline-1781632665.json",
 			"event_id": "dialogic_020"
 		}
 	],
