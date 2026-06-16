@@ -3,6 +3,11 @@
 
 	],
 	"variables": [
-
+		{
+			"id": "1781621294-648",
+			"name": "pegar_faca",
+			"type": 0,
+			"value": "false"
+		}
 	]
 }
