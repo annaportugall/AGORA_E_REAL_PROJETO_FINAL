@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/DefaultBoldFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://addons/dialogic/Documentation/Theme/Font/Cinzel/static/Cinzel-Black.ttf" type="DynamicFontData" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Regular.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/DefaultItalicFont.tres" type="DynamicFont" id=14]
 [ext_resource path="res://dialogic/Menus/ChatGPT Image 3 de mai. de 2026, 14_54_56.png" type="Texture" id=15]
+[ext_resource path="res://ChatGPT Image 16 de jun. de 2026, 16_10_22 (1).png" type="Texture" id=16]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.360784, 0.392157, 0.407843, 1 )
@@ -210,36 +211,42 @@ theme = SubResource( 8 )
 script = ExtResource( 11 )
 Game = NodePath("../../Game")
 
-[node name="MenuButton" type="Button" parent="Menus/MenuContainer"]
-margin_left = 896.0
-margin_top = 21.0
-margin_right = 1006.0
-margin_bottom = 69.0
-text = "☰ Menu"
-
-[node name="InGameMenu" type="HBoxContainer" parent="Menus/MenuContainer"]
-visible = false
+[node name="InGameMenu" type="Control" parent="Menus/MenuContainer"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 649.0
-margin_top = -389.0
-margin_right = -276.0
-margin_bottom = -273.0
+margin_left = 652.0
+margin_top = -393.0
+margin_right = -273.0
+margin_bottom = -277.0
+mouse_filter = 2
 theme = SubResource( 10 )
-custom_constants/separation = 20
-alignment = 1
+
+[node name="FundoModal" type="ColorRect" parent="Menus/MenuContainer/InGameMenu"]
+margin_left = 39.0
+margin_right = 39.0
+margin_bottom = 116.0
+color = Color( 0, 0, 0, 0.588235 )
 
 [node name="Panel" type="Panel" parent="Menus/MenuContainer/InGameMenu"]
-margin_left = 49.0
-margin_right = 49.0
-margin_bottom = 116.0
+anchor_left = -6.593
+anchor_top = -1.749
+anchor_right = -6.593
+anchor_bottom = -1.749
+margin_left = 369.707
+margin_top = 206.884
+margin_right = 673.707
+margin_bottom = 379.884
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menus/MenuContainer/InGameMenu/Panel"]
-margin_left = 187.0
-margin_top = -134.0
-margin_right = 302.0
-margin_bottom = -18.0
+anchor_left = 0.174
+anchor_top = 0.995
+anchor_right = 0.331
+anchor_bottom = 1.077
+margin_left = 40.104
+margin_top = -148.135
+margin_right = 107.376
+margin_bottom = -42.321
 
 [node name="Settings_Button" type="Button" parent="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer"]
 margin_right = 115.0
@@ -266,6 +273,14 @@ margin_top = 90.0
 margin_right = 115.0
 margin_bottom = 116.0
 text = "Carregar"
+flat = true
+
+[node name="MenuButton" type="Button" parent="Menus/MenuContainer"]
+margin_left = 923.0
+margin_top = 28.0
+margin_right = 975.0
+margin_bottom = 83.0
+icon = ExtResource( 16 )
 flat = true
 
 [node name="SubMenus" type="Control" parent="Menus/MenuContainer"]
@@ -843,11 +858,11 @@ stream = ExtResource( 4 )
 volume_db = -0.25
 autoplay = true
 
-[connection signal="pressed" from="Menus/MenuContainer/MenuButton" to="Menus/MenuContainer" method="_on_MenuButton_pressed"]
 [connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/Settings_Button" to="Menus/MenuContainer" method="_on_Ingame_Settings_Button_pressed"]
 [connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/History_Button" to="Menus/MenuContainer" method="_on_Ingame_History_Button_pressed"]
 [connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/Save_Button" to="Menus/MenuContainer" method="_on_Ingame_Save_Button_pressed"]
 [connection signal="pressed" from="Menus/MenuContainer/InGameMenu/Panel/VBoxContainer/Load_Button" to="Menus/MenuContainer" method="_on_Ingame_Load_Button_pressed"]
+[connection signal="pressed" from="Menus/MenuContainer/MenuButton" to="Menus/MenuContainer" method="_on_MenuButton_pressed"]
 [connection signal="item_selected" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/Display/DisplaySelect" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_DisplaySelect_item_selected"]
 [connection signal="value_changed" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/OverallVolume/Slider" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_Slider_value_changed"]
 [connection signal="pressed" from="Menus/MenuContainer/SubMenus/Buttons/MainMenu_Button" to="Menus/MenuContainer/SubMenus" method="_on_MainMenu_Button_pressed"]
