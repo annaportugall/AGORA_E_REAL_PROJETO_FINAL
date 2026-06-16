@@ -50,7 +50,9 @@ func resume_game():
 ################################################################################
 
 func _ready():
-	show()
+	# Garante com 100% de certeza que o menu começa invisível quando o jogo inicia!
+	$InGameMenu.visible = false
+	$InGameMenu/Panel.visible = false
 
 # look for right click input to show the SAVE MENU
 func _input(event):
@@ -80,8 +82,12 @@ func _on_Ingame_Save_Button_pressed():
 	saved_image = get_tree().get_root().get_texture().get_data()
 	saved_image.flip_y()
 	
+	# Fecha o modal (fundo + botões)
+	$InGameMenu.visible = false  
+	
 	pause_game()
-	$SubMenus.open_save_menu()
+	# Acessa o SubMenus direto, já que ele é filho do MenuContainer!
+	$SubMenus.open_save_menu() 
 
 
 func _on_Ingame_Load_Button_pressed():
@@ -89,6 +95,8 @@ func _on_Ingame_Load_Button_pressed():
 	# Retrieve the save screenshot
 	saved_image = get_tree().get_root().get_texture().get_data()
 	saved_image.flip_y()
+	
+	$InGameMenu.visible = false  
 	
 	pause_game()
 	$SubMenus.open_load_menu()
@@ -100,20 +108,31 @@ func _on_Ingame_Settings_Button_pressed():
 	saved_image = get_tree().get_root().get_texture().get_data()
 	saved_image.flip_y()
 	
+	$InGameMenu.visible = false  
+	
 	pause_game()
 	$SubMenus.open_settings_menu()
 
 
 func _on_Ingame_History_Button_pressed():
 	get_tree().set_input_as_handled()
+	
+	# 1. Fecha o menu principal de botões para limpar a tela
+	$InGameMenu.visible = false  
+	
+	# 2. Abre a tela de história nativa do Dialogic
 	Dialogic.toggle_history()
-
+	
+	# 3. Força o botão físico de voltar a aparecer!
+	
 
 func _on_MenuButton_pressed():
-	# Inverte a visibilidade do menu
+	# Inverte a visibilidade do menu principal
 	$InGameMenu.visible = !$InGameMenu.visible
 	
 	if $InGameMenu.visible:
-		pause_game() # Chama a sua função que já pausa o jogo!
+		$InGameMenu/Panel.visible = true 
+		pause_game() 
 	else:
-		get_tree().paused = false # Despausa o jogo se o menu for fechado
+		get_tree().paused = false
+
