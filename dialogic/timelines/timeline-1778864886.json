@@ -1,54 +1,28 @@
 {
 	"events": [
 		{
-			"character": "",
+			"condition": "",
+			"definition": "1781621294-648",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1777839556.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "cu"
+			"text": "Estou armada!"
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
+			"condition": "",
+			"definition": "1781621294-648",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1777839556.json",
+			"event_id": "dialogic_001",
 			"portrait": "",
-			"question": "Me comeria"
-		},
-		{
-			"choice": "sim",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"choice": "não",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"choice": "talvez",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"choice": "quem sabe",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"choice": "pagando...",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
+			"text": "Estou com medo!"
 		},
 		{
 			"event_id": "dialogic_013"
