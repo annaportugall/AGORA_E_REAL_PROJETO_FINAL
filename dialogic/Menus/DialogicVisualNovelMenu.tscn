@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/DefaultBoldFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Italic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/Cinzel/static/Cinzel-Black.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/dialogic/Documentation/Theme/Font/Cinzel,Uncial_Antiqua (1)/Uncial_Antiqua/UncialAntiqua-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://dialogic/Menus/Menu_BackgroundMusic_Next to You.ogg" type="AudioStream" id=4]
 [ext_resource path="res://dialogic/Menus/DialogicMenus_SubMenus.gd" type="Script" id=5]
 [ext_resource path="res://dialogic/Menus/DialogicMenus_MainMenu.gd" type="Script" id=6]
@@ -129,10 +130,16 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="DynamicFont" id=12]
 size = 50
-font_data = ExtResource( 3 )
+outline_color = Color( 0.815686, 0.768627, 0.458824, 1 )
+use_mipmaps = true
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxLine" id=13]
 thickness = 3
+
+[sub_resource type="DynamicFont" id=17]
+size = 48
+font_data = ExtResource( 3 )
 
 [sub_resource type="Animation" id=14]
 resource_name = "Fade"
@@ -589,12 +596,14 @@ margin_right = 1021.0
 margin_bottom = 607.0
 
 [node name="Title" type="Label" parent="Menus/MenuContainer/MainMenu/Buttons"]
-margin_left = 88.0
+modulate = Color( 1, 0.843137, 0, 1 )
+margin_left = 150.0
 margin_top = 23.0
-margin_right = 951.0
-margin_bottom = 85.0
-custom_fonts/font = SubResource( 12 )
-text = "The Fall of Elysium - A Ascenção dos Elementos"
+margin_right = 630.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 17 )
+text = "The Fall of Elysium:
+ A Ascenção dos Elementos"
 align = 1
 
 [node name="NewGame_Button" type="Button" parent="Menus/MenuContainer/MainMenu/Buttons"]
