@@ -868,6 +868,33 @@ stream = ExtResource( 4 )
 volume_db = -0.25
 autoplay = true
 
+[node name="Diario" type="CanvasLayer" parent="."]
+
+[node name="Janela" type="Panel" parent="Diario"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Conteudo" type="VBoxContainer" parent="Diario/Janela"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Titulo" type="Label" parent="Diario/Janela/Conteudo"]
+margin_right = 169.0
+margin_bottom = 14.0
+text = "DIÁRIO DE INVESTIGAÇÃO"
+
+[node name="Scroll" type="ScrollContainer" parent="Diario/Janela/Conteudo"]
+margin_top = 18.0
+margin_right = 169.0
+margin_bottom = 18.0
+
+[node name="ListaPistas" type="VBoxContainer" parent="Diario/Janela/Conteudo/Scroll"]
+
+[node name="Fechar" type="Button" parent="Diario/Janela"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "X"
+
 [connection signal="item_selected" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/Display/DisplaySelect" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_DisplaySelect_item_selected"]
 [connection signal="value_changed" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/OverallVolume/Slider" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_Slider_value_changed"]
 [connection signal="pressed" from="Menus/MenuContainer/SubMenus/Buttons/MainMenu_Button" to="Menus/MenuContainer/SubMenus" method="_on_MainMenu_Button_pressed"]
