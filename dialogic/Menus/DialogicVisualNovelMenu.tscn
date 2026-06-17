@@ -536,7 +536,6 @@ __meta__ = {
 }
 
 [node name="InGameMenu" type="Control" parent="Menus/MenuContainer"]
-visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -603,10 +602,10 @@ text = "Carregar"
 flat = true
 
 [node name="MenuButton" type="Button" parent="Menus/MenuContainer"]
-margin_left = 923.0
-margin_top = 28.0
-margin_right = 975.0
-margin_bottom = 83.0
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 60.0
+margin_bottom = 65.0
 icon = ExtResource( 16 )
 flat = true
 
@@ -616,6 +615,18 @@ anchor_bottom = 1.0
 script = ExtResource( 6 )
 starting_timeline = "DefaultTimeline"
 
+<<<<<<< HEAD
+=======
+[node name="BackgroundColor" type="ColorRect" parent="Menus/MenuContainer/MainMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 4.0
+margin_right = -1.0
+margin_bottom = 4.0
+color = Color( 0, 0, 0, 1 )
+
+>>>>>>> ce30c7d34c7556ff9ab5deb67f515a592b99cbff
 [node name="BackgroundTexture" type="TextureRect" parent="Menus/MenuContainer/MainMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -633,7 +644,7 @@ margin_right = 1022.0
 margin_bottom = 614.0
 
 [node name="Title" type="Label" parent="Menus/MenuContainer/MainMenu/Buttons"]
-modulate = Color( 1, 0.843137, 0, 1 )
+modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
 margin_left = 150.0
 margin_top = 23.0
 margin_right = 630.0
