@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/DefaultBoldFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://addons/dialogic/Documentation/Theme/Font/Cinzel/static/Cinzel-Black.ttf" type="DynamicFontData" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://dialogic/Menus/DialogicMenus_AboutMenu.gd" type="Script" id=12]
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Regular.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/DefaultItalicFont.tres" type="DynamicFont" id=14]
+[ext_resource path="res://dialogic/Menus/Diario.gd" type="Script" id=15]
 [ext_resource path="res://ChatGPT Image 16 de jun. de 2026, 16_10_22 (1).png" type="Texture" id=16]
 [ext_resource path="res://Artes/Fundos/começo.png" type="Texture" id=17]
 
@@ -615,15 +616,6 @@ anchor_bottom = 1.0
 script = ExtResource( 6 )
 starting_timeline = "DefaultTimeline"
 
-[node name="BackgroundColor" type="ColorRect" parent="Menus/MenuContainer/MainMenu"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -1.0
-margin_top = 4.0
-margin_right = -1.0
-margin_bottom = 4.0
-color = Color( 1, 0, 0, 1 )
-
 [node name="BackgroundTexture" type="TextureRect" parent="Menus/MenuContainer/MainMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -635,10 +627,10 @@ texture = ExtResource( 17 )
 expand = true
 
 [node name="Buttons" type="Control" parent="Menus/MenuContainer/MainMenu"]
-margin_left = 5.0
-margin_top = 10.0
-margin_right = 1021.0
-margin_bottom = 607.0
+margin_left = 6.0
+margin_top = 17.0
+margin_right = 1022.0
+margin_bottom = 614.0
 
 [node name="Title" type="Label" parent="Menus/MenuContainer/MainMenu/Buttons"]
 modulate = Color( 1, 0.843137, 0, 1 )
@@ -865,8 +857,33 @@ flat = true
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="Menus/MenuContainer"]
 stream = ExtResource( 4 )
-volume_db = -0.25
 autoplay = true
+
+[node name="Diario" type="CanvasLayer" parent="."]
+script = ExtResource( 15 )
+
+[node name="Janela" type="Panel" parent="Diario"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -153.0
+rect_scale = Vector2( 1, 1.33333 )
+
+[node name="Conteudo" type="VBoxContainer" parent="Diario/Janela"]
+margin_right = 1029.0
+margin_bottom = 449.0
+
+[node name="Titulo" type="Label" parent="Diario/Janela/Conteudo"]
+margin_right = 1029.0
+margin_bottom = 14.0
+text = "DIÁRIO DE INVESTIGAÇÃO"
+
+[node name="Scroll" type="ScrollContainer" parent="Diario/Janela/Conteudo"]
+margin_top = 18.0
+margin_right = 1029.0
+margin_bottom = 18.0
+rect_pivot_offset = Vector2( 10, 0 )
+
+[node name="ListaPistas" type="VBoxContainer" parent="Diario/Janela/Conteudo/Scroll"]
 
 [connection signal="item_selected" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/Display/DisplaySelect" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_DisplaySelect_item_selected"]
 [connection signal="value_changed" from="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu/HBox/VBox/OverallVolume/Slider" to="Menus/MenuContainer/SubMenus/MenuContent/SettingsMenu" method="_on_Slider_value_changed"]
