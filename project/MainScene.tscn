@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://dialogic/Menus/DialogicVisualNovelMenu.tscn" type="PackedScene" id=1]
-[ext_resource path="res://dialogic/characters/ChatGPT Image 3 de mai. de 2026, 14_54_56.png" type="Texture" id=2]
+[ext_resource path="res://Artes/Fundos/começo.png" type="Texture" id=2]
 
 [sub_resource type="Theme" id=1]
 BoxContainer/constants/separation = 4
